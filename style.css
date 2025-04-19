@@ -1,0 +1,76 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+  background: #f0f4ff;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #304ffe;
+}
+
+.tabs {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  background: #e0e0e0;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.tabs .active-tab {
+  background-color: #304ffe;
+  color: white;
+  font-weight: bold;
+}
+
+.section {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+}
+
+input[type="date"] {
+  padding: 8px;
+  font-size: 16px;
+  margin: 10px;
+}
+
+#report h4 {
+  margin-top: 20px;
+  color: #1a237e;
+}
+
+#report ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#report li {
+  background: #e8eaf6;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 8px;
+}

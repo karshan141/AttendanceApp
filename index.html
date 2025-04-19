@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Attendance</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/shim.min.js"></script>
+</head>
+<body>
+  <h1>🧑‍💼 Employee Attendance App</h1>
+
+  <div class="tabs">
+    <button onclick="showSection('attendanceSection')" id="attendanceTab" class="active-tab">📝 Mark Attendance</button>
+    <button onclick="showSection('reportSection')" id="reportTab">📊 Day-wise List</button>
+    <button onclick="showSection('pendingOffSection')" id="pendingOffTab">📌 Pending Offs</button>
+    <button onclick="showSection('matrixSection')" id="matrixTab">📋 Matrix Report</button>
+  </div>
+
+  <!-- ✅ Section: Mark Attendance -->
+  <div id="attendanceSection" class="section">
+    <label for="date">Select Date:</label>
+    <input type="date" id="date" />
+    <button onclick="saveAttendance()">💾 Save Attendance</button>
+
+    <table id="attendanceTable">
+      <thead>
+        <tr>
+          <th>Employee Name</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+
+  <!-- ✅ Section: Normal Report -->
+  <div id="reportSection" class="section" style="display:none;">
+    <h3>📅 Attendance Log</h3>
+    <div id="report"></div>
+  </div>
+
+  <!-- ✅ Section: Pending OFF Report -->
+  <div id="pendingOffSection" class="section" style="display:none;">
+    <h3>📌 Pending Off Report</h3>
+    <div id="pendingOffReport"></div>
+  </div>
+
+  <!-- ✅ Section: Matrix Report -->
+  <div id="matrixSection" class="section" style="display:none;">
+    <h3>📋 Attendance Matrix</h3>
+    <label>From: <input type="date" id="fromDate" /></label>
+    <label>To: <input type="date" id="toDate" /></label>
+    <button onclick="generateMatrix()">🔍 View Report</button>
+
+    <div style="margin-top: 15px;">
+      <button onclick="window.print()">🖨️ Print</button>
+      <button onclick="exportMatrixToExcel()">📊 Export Excel</button>
+      <button onclick="exportMatrixToPDF()">📥 Export PDF</button>
+    </div>
+
+    <div id="matrixReport" style="overflow-x:auto; margin-top:20px;"></div>
+  </div>
+
+  
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.20.1/xlsx.full.min.js"></script>
+</body>
+</html>
