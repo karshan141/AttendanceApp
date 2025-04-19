@@ -1,0 +1,67 @@
+/* Your existing CSS rules */
+
+.container {
+    display: flex; /* Enable Flexbox for the container */
+    flex-direction: row; /* Arrange items in a row */
+    align-items: flex-start; /* Align items to the top */
+    padding: 20px;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    gap: 20px; /* Space between the employee input and the dashboard */
+  }
+  
+  .employee-input-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 300px; /* Adjust this width as needed */
+    flex-shrink: 0; /* Prevent it from shrinking */
+  }
+  
+  .employee-input-section h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+  }
+  
+  .employee-input-section div {
+    margin-bottom: 10px;
+  }
+  
+  .employee-input-section label {
+    display: inline-block;
+    width: 120px;
+    text-align: left;
+    margin-right: 10px;
+  }
+  
+  .employee-input-section input[type="text"],
+  .employee-input-section select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    width: 200px;
+  }
+  
+  .employee-input-section button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .employee-input-section button:hover {
+    background-color: #0056b3;
+  }
+  
+  #employeeAddMessage {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* Any other existing CSS rules in your file should remain */

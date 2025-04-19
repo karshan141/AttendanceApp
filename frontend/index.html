@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <div class="employee-input-section">
+    <h2>Add New Employee</h2>
+    <form id="addEmployeeForm">
+      <div>
+        <label for="employeeName">Employee Name:</label>
+        <input type="text" id="employeeName" name="employeeName" required>
+      </div>
+      <div>
+        <label for="employeeId">Employee ID:</label>
+        <input type="text" id="employeeId" name="employeeId" required>
+      </div>
+      <div>
+        <label for="weeklyOff">Weekly Off Day:</label>
+        <select id="weeklyOff" name="weeklyOff">
+          <option value="">Select Day</option>
+          <option value="Sunday">Sunday</option>
+          <option value="Monday">Monday</option>
+          <option value="Tuesday">Tuesday</option>
+          <option value="Wednesday">Wednesday</option>
+          <option value="Thursday">Thursday</option>
+          <option value="Friday">Friday</option>
+          <option value="Saturday">Saturday</option>
+        </select>
+      </div>
+      <button type="button" onclick="addEmployee()">Add Employee</button>
+    </form>
+    <div id="employeeAddMessage" style="margin-top: 10px;"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
